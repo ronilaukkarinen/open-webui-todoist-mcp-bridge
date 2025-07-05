@@ -1,6 +1,11 @@
 # Open WebUI Todoist MCP Bridge
 
+![Open WebUI](https://img.shields.io/badge/Open%20WebUI-222222?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGhlaWdodD0iMWVtIiBzdHlsZT0iZmxleDpub25lO2xpbmUtaGVpZ2h0OjEiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjFlbSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNy42OTcgMTJjMCA0Ljk3LTMuOTYyIDktOC44NDkgOUMzLjk2MiAyMSAwIDE2Ljk3IDAgMTJzMy45NjItOSA4Ljg0OC05YzQuODg3IDAgOC44NDkgNC4wMyA4Ljg0OSA5em0tMy42MzYgMGMwIDIuOTI4LTIuMzM0IDUuMzAxLTUuMjEzIDUuMzAxLTIuODc4IDAtNS4yMTItMi4zNzMtNS4yMTItNS4zMDFTNS45NyA2LjY5OSA4Ljg0OCA2LjY5OWMyLjg4IDAgNS4yMTMgMi4zNzMgNS4yMTMgNS4zMDF6Ij48L3BhdGg+PHBhdGggZD0iTTI0IDNoLTMuMzk0djE4SDI0VjN6Ij48L3BhdGg+PC9zdmc+Cg==)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Version](https://img.shields.io/badge/version-1.1.0-blue?style=for-the-badge)
+
 A powerful Open WebUI Function that bridges your Todoist tasks with AI conversations through Model Context Protocol (MCP). This function automatically injects your current tasks, completed tasks, and projects into conversations, enabling natural task management in any language.
+
+![Screenshot from 2025-07-05 21-18-19](https://github.com/user-attachments/assets/2dc4043d-2241-481a-9cb2-9fad3c63fbd4)
 
 ## 🌟 Features
 
@@ -11,14 +16,17 @@ A powerful Open WebUI Function that bridges your Todoist tasks with AI conversat
 - **Unicode Support**: Properly handles international characters (ä, ö, etc.)
 - **Flexible Integration**: Uses MCP Proxy Server for reliable API access
 
-## 📋 Prerequisites
+## Prerequisites
 
-### 1. Todoist MCP Server
+- [Open WebUI](https://github.com/open-webui/open-webui)
+- [MCP Proxy Server for Open WebUI](https://docs.openwebui.com/openapi-servers/mcp/)
+- [Official Doist/todoist-mcp](https://github.com/Doist/todoist-mcp)
 
-First, you need the official Todoist MCP server running:
+First, you need [the official Todoist MCP server](https://github.com/Doist/todoist-mcp) running:
 
 ```bash
 # Install the Todoist MCP server
+git clone https://github.com/Doist/todoist-mcp
 cd ~/todoist-mcp
 npm install
 npm run build
@@ -26,8 +34,6 @@ npm run build
 # Set up your Todoist API token
 export TODOIST_API_TOKEN="your_token_here"
 ```
-
-### 2. MCP Proxy Server
 
 Install and run the MCP Proxy Server:
 
@@ -153,30 +159,3 @@ The AI receives:
 ### Unicode Character Issues
 - This version (1.1.0+) includes Unicode fixes for international characters
 - Upgrade to the latest version if seeing encoded characters
-
-## 📝 Changelog
-
-### Version 1.1.0
-- Added Unicode support for international characters (ä, ö, etc.)
-- Added model exclusion functionality
-- Improved error handling and debug logging
-- Removed hardcoded filters for maximum flexibility
-
-### Version 1.0.0
-- Initial release
-- Basic Todoist MCP bridge functionality
-- Automatic task data injection
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit issues and pull requests.
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 🙏 Acknowledgments
-
-- Built for [Open WebUI](https://github.com/open-webui/open-webui)
-- Uses the [official Todoist MCP server](https://github.com/modelcontextprotocol/server-todoist)
-- Inspired by the [Open WebUI Memory](https://github.com/ronilaukkarinen/open-webui-memory) function
