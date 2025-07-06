@@ -1,5 +1,5 @@
 > [!NOTE]
-> This function is actually defunct and useless, because it's better to use directly [Official Doist/todoist-mcp](https://github.com/Doist/todoist-mcp) + [MCP Proxy Server for Open WebUI](https://docs.openwebui.com/openapi-servers/mcp/) and add that as Tool server from Open WebUI Settings > Tools, then add a custom model with Advanced params, Function calling: Native. That way it works out of the box. Modern LLMs like openai/gpt-4.1 preferred, others won't necessarily work. Archiving this repo.
+> This experimental function is actually defunct and not very useful, since it's better to use the [Official Doist/todoist-mcp](https://github.com/Doist/todoist-mcp) along with the [MCP Proxy Server for Open WebUI](https://docs.openwebui.com/openapi-servers/mcp/). Just add that as a Tool server from Open WebUI **Settings → Tools**, then create a custom model with **Advanced Params** and set **Function Calling** to **Native**. That way, everything works smoothly out of the box. Modern LLMs like `openai/gpt-4.1` are preferred, others might not work as reliably. I'm archiving this repo.
 
 # Open WebUI Todoist MCP Bridge
 
